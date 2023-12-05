@@ -51,19 +51,48 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget> [
-              Text("A",style: TextStyle(fontSize: 25),),
-              Text("B",style: TextStyle(fontSize: 25),),
-              Text("C",style: TextStyle(fontSize: 25),),
-              Text("D",style: TextStyle(fontSize: 25),),
-              ElevatedButton(onPressed: (){
-                
-              },child: Text('Click')
-              )
-             ],
-          )
+      body: Container(
+        height: 300,
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget> [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text("R1",style: TextStyle(fontSize: 25),),
+                Text("R2",style: TextStyle(fontSize: 25),),
+
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ElevatedButton(onPressed: (){
+
+                    }, child: Text("Button")),
+                    ElevatedButton(onPressed: (){
+
+                    }, child: Text("Button")),
+                  ],
+
+                ),
+
+                Text("R3",style: TextStyle(fontSize: 25),),
+                Text("R4",style: TextStyle(fontSize: 25),),
+              ],
+            ),
+                Text("A",style: TextStyle(fontSize: 25),),
+                Text("B",style: TextStyle(fontSize: 25),),
+                Text("C",style: TextStyle(fontSize: 25),),
+                Text("D",style: TextStyle(fontSize: 25),),
+                ElevatedButton(onPressed: (){
+
+                },child: Text('Click')
+                )
+               ],
+            ),
+      )
       );
   }
 }
